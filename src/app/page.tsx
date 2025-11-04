@@ -1,6 +1,5 @@
 import { ChatError } from "@/features/chat/models/Errors";
 import * as token from "@/lib/token";
-import { Cat } from "@/ui/Cat";
 import { RepositoryLink } from "@/ui/RepositoryLink";
 import { LockKeyhole } from "lucide-react";
 import type { Metadata } from "next";

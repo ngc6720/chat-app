@@ -4,6 +4,7 @@ import { redirect, RedirectType } from "next/navigation";
 import { ChatError } from "@/features/chat/models/Errors";
 import * as token from "@/lib/token";
 import type { Metadata } from "next";
+import { RepositoryLink } from "@/ui/RepositoryLink";
 
 export const metadata: Metadata = {
   title: "Cat the chat app | Chat",
@@ -21,7 +22,9 @@ export default async function ChatPage() {
   return (
     <main className="h-screen bg-background">
       <div className="flex flex-col w-full h-full m-auto max-w-3xl p-2 sm:p-16 ">
-        <h1 className="text-0">Cat the chat app / Chat</h1>
+        <h1 className="text-0 flex justify-between mb-2">
+          Cat the chat app / Chat <RepositoryLink />
+        </h1>
         <Chat />
       </div>
     </main>

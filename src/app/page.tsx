@@ -1,6 +1,7 @@
 import { ChatError } from "@/features/chat/models/Errors";
 import * as token from "@/lib/token";
 import { Cat } from "@/ui/Cat";
+import { RepositoryLink } from "@/ui/RepositoryLink";
 import { LockKeyhole } from "lucide-react";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
@@ -47,8 +48,10 @@ export default async function Home({
           Sorry, this app needs javascript to function. Please activate
           javascript to use the app properly.
         </noscript>
+
         <h1 className="mb-16 flex justify-between">
-          Cat the chat app <Cat />
+          Cat the chat app
+          <RepositoryLink />
         </h1>
         <form action={postToken} className="flex flex-col gap-3">
           <label className="flex flex-col gap-3">

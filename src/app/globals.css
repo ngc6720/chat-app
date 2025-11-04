@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import "./theme";
+
+@theme inline {
+  --font-primary: "Courier";
+  --font-secondary: var(--font-inter);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-front: var(--surface-front);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-disabled-foreground: var(--disabled-foreground);
+  --color-disabled-background: var(--disabled-background);
+  --color-inv-foreground: var(--inv-foreground);
+  --color-inv-background: var(--inv-background);
+  --color-translucent: var(--translucent);
+  --color-accent: var(--accent);
+
+  --color-button-primary-bg-hover: var(--button-primary-bg-hover);
+  --color-button-secondary-bg: var(--button-secondary-bg);
+  --color-button-secondary-bg-hover: var(--button-secondary-bg-hover);
+  --color-button-secondary-bg-active: var(--button-secondary-bg-active);
+}
+
+@utility word-break-word {
+  word-break: break-word;
+}
+@utility grid-area-1-1 {
+  grid-area: 1 / 1;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-primary);
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: var(--color-surface-front) var(--color-surface);
+  scrollbar-width: thin;
+}
+
+@utility u-button {
+  font-family: var(--font-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 14px;
+  @apply pointer-events-auto;
+  @apply disabled:cursor-not-allowed;
+  @apply flex justify-center items-center w-fit gap-2;
+  @apply h-9 px-2 font-bold rounded-md cursor-pointer;
+  svg {
+    @apply max-w-5 min-w-5;
+  }
+  > div {
+    @apply flex gap-2;
+  }
+}
+
+@utility u-button-square {
+  @apply h-9 w-9 p-0 items-center;
+}
+
+@utility u-button-primary {
+  @apply u-button;
+  @apply bg-inv-background text-inv-foreground fill-inv-foreground;
+  @apply hover:bg-button-primary-bg-hover;
+}
+
+@utility u-button-secondary {
+  @apply u-button;
+  @apply fill-foreground;
+  @apply hover:text-foreground hover:bg-button-secondary-bg-hover bg-button-secondary-bg;
+  @apply active:bg-button-secondary-bg-active;
+  @apply transition-all;
+  @apply active:translate-y-[0.05rem];
+}
+
+@utility u-button-push {
+  @apply border-disabled-foreground;
+  @apply border-0;
+  @apply disabled:fill-disabled-foreground disabled:bg-disabled-background disabled:border-3;
+  @apply transition-all duration-75;
+}

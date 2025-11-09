@@ -22,7 +22,7 @@ export default async function ChatPage() {
   return (
     <main className="h-screen bg-background">
       <div className="md:grid md:grid-cols-[1fr_48rem_1fr] md:max-w-full">
-        <div className="flex flex-col col-start-2 h-screen m-auto max-w-3xl py-2 md:py-16 md:px-4 px-2">
+        <div className="flex flex-col col-start-2 h-screen m-auto max-w-3xl w-full py-2 md:py-16 md:px-4 px-2">
           <h1 className="text-0 flex justify-between mb-2">
             Cat the chat app / Chat <RepositoryLink />
           </h1>

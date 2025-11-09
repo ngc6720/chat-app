@@ -42,7 +42,7 @@ export default async function Home({
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-background">
-      <div className="min-h-screen h-screen w-full max-w-3xl px-2 py-2 sm:py-16 sm:px-16 overflow-hidden my-auto">
+      <div className="min-h-screen h-screen w-full max-w-3xl px-2 py-2 sm:py-16 sm:px-4 overflow-hidden my-auto">
         <noscript>
           Sorry, this app needs javascript to function. Please activate
           javascript to use the app properly.

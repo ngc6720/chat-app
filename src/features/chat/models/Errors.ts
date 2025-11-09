@@ -3,12 +3,14 @@ export const ChatError: {
   badInput: "bad_input";
   tokenExpired: "token_expired";
   tokenMissing: "token_missing";
+  tokenInvalid: "token_invalid";
   rateLimited: "rate_limited";
 } = {
   unknown: "unknown",
   badInput: "bad_input",
   tokenExpired: "token_expired",
   tokenMissing: "token_missing",
+  tokenInvalid: "token_invalid",
   rateLimited: "rate_limited",
 };
 export type ChatError = (typeof ChatError)[keyof typeof ChatError];
@@ -18,5 +20,6 @@ export const ChatErrorInlineMessage: { [Property in ChatError]: string } = {
   [ChatError.badInput]: "Bad input",
   [ChatError.tokenExpired]: "Your API token is invalid",
   [ChatError.tokenMissing]: "Your API token is missing",
+  [ChatError.tokenInvalid]: "Your API token is not valid",
   [ChatError.rateLimited]: "Your request was rate limited",
 };

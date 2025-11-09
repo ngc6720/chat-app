@@ -42,7 +42,7 @@ export default async function Home({
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-background">
-      <div className="min-h-screen h-screen w-full max-w-3xl px-2 py-2 sm:py-16 sm:px-16 overflow-hidden my-auto">
+      <div className="min-h-screen h-screen w-full max-w-3xl px-2 py-2 sm:py-16 sm:px-4 overflow-hidden my-auto">
         <noscript>
           Sorry, this app needs javascript to function. Please activate
           javascript to use the app properly.
@@ -53,7 +53,7 @@ export default async function Home({
           <RepositoryLink />
         </h1>
         <form action={postToken} className="flex flex-col gap-3">
-          <label className="flex flex-col gap-3">
+          <label className="flex flex-col gap-3 font-secondary">
             <span>
               {error ? errorMessage[error] : "Hi!"} This app uses Mistral AI.
               Please enter your temporary key for the Mistral public API. It
@@ -74,7 +74,7 @@ export default async function Home({
             <input
               name={formDataName.token}
               type="text"
-              className="p-3 bg-surface"
+              className="p-3 bg-surface font-primary"
               placeholder="Your Mistral public API key"
               required
             />

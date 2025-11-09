@@ -72,7 +72,11 @@ export default function Chat() {
 
     if (!response.ok) {
       const error: ChatError = (await response.json()).error;
-      error === ChatError.tokenExpired || ChatError.tokenMissing
+      const shouldRedirect =
+        error === ChatError.tokenExpired ||
+        ChatError.tokenMissing ||
+        ChatError.tokenExpired;
+      shouldRedirect
         ? router.replace(`/?error=${error}`)
         : setError(ChatErrorInlineMessage[error]);
       /*

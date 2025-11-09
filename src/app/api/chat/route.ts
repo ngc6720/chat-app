@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
       case 401:
         token.remove(cookieStore);
         return NextResponse.json(
-          { error: ChatError.tokenExpired },
+          { error: ChatError.tokenInvalid },
           { status: 401 },
         );
       case 429:

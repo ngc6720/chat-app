@@ -93,6 +93,8 @@ const errorMessage = {
   [ChatError.tokenMissing]: "Not so faaast! You are missing an API token.",
   [ChatError.tokenExpired]:
     "Ooops! Your token has expired. No worries, your conversation is saved locally in your browser.",
+  [ChatError.tokenInvalid]:
+    "Ooops! Your token is not valid, or maybe it has expired. No worries, your conversation is saved locally in your browser.",
   [ChatError.badInput]: "",
   [ChatError.unknown]: "",
   [ChatError.rateLimited]: "",

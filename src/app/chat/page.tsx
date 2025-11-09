@@ -31,7 +31,7 @@ export default async function ChatPage() {
         <div className="hidden xl:flex p-8 py-16 h-full w-full">
           <div className="border-muted-foreground border w-full p-6 font-secondary rounded-lg h-fit mt-auto">
             <p>
-              Hey ! I am working on another project about RAG and audio, you can{" "}
+              Hey! I am working on another project about RAG and audio, you can{" "}
               <a
                 href="https://github.com/ngc6720/rag-audio"
                 title="Link to RAG-audio Github repository"

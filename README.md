@@ -4,7 +4,7 @@ Talk with your cat ! This is an app for simple chat completions streaming with M
 
 The project is build with [Next.js](https://nextjs.org). It leverages temporary http cookies to store a user provided Mistral API key. A chat interface allows to interact with a simple "cat" bot (thanks to the system prompt). The conversation is saved in the browser via localstorage (using Zustand for stores).
 
-[See the live version](https://chat-app-dun-xi-83.vercel.app/)
+[Try the live version](https://chat-app-dun-xi-83.vercel.app/)
 
 ## Installation
 
@@ -64,6 +64,7 @@ pnpm test
 ## Variables (optional)
 
 You can use variables to ease developement by creating a file named ".env.local" at the root of the project.
+
 Available variables (these are only relevant in development mode):
 
 ```shell
@@ -71,6 +72,6 @@ Available variables (these are only relevant in development mode):
 
 # (optional) When set to "1", will use a mock api for the chat completions stream (for ui development you may not want to use the real chat api). To use the production api, omit it or set it to "0".
 NEXT_PUBLIC_USE_MOCK_API=1
-# (optional) Will use YOUR_PUBLIC_API_TOKEN for the chat client instead of asking for it in the app front end (avoid expired cookie and redirects when you are working on the chat ui)
-MISTRAL_API_KEY=YOUR_PUBLIC_API_TOKEN
+# (optional) Will use YOUR_PUBLIC_API_KEY for the chat client instead of asking for it in the app front end (avoid expired cookie and redirects when you are working on the chat ui)
+MISTRAL_API_KEY=YOUR_PUBLIC_API_KEY
 ```

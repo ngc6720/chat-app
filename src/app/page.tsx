@@ -81,7 +81,7 @@ export default async function Home({
           </label>
           <button type="submit" className="u-button-primary">
             <LockKeyhole />
-            <div>Save token</div>
+            <div>Use this key</div>
           </button>
         </form>
       </div>
@@ -90,11 +90,11 @@ export default async function Home({
 }
 
 const errorMessage = {
-  [ChatError.tokenMissing]: "Not so faaast! You are missing an API token.",
+  [ChatError.tokenMissing]: "Not so faaast! You are missing an API key.",
   [ChatError.tokenExpired]:
-    "Ooops! Your token has expired. No worries, your conversation is saved locally in your browser.",
+    "Ooops! Your key has expired. No worries, your conversation is saved locally in your browser.",
   [ChatError.tokenInvalid]:
-    "Ooops! Your token is not valid, or maybe it has expired. No worries, your conversation is saved locally in your browser.",
+    "Ooops! Your key is not valid, or maybe it has expired. No worries, your conversation is saved locally in your browser.",
   [ChatError.badInput]: "",
   [ChatError.unknown]: "",
   [ChatError.rateLimited]: "",

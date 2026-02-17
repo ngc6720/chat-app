@@ -45,18 +45,14 @@ body {
 @utility u-button {
   font-family: var(--font-secondary);
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   @apply pointer-events-auto;
   @apply disabled:cursor-not-allowed;
-  @apply flex justify-center items-center w-fit gap-2;
-  @apply h-9 px-2 font-bold rounded-md cursor-pointer;
-  svg {
-    @apply max-w-5 min-w-5;
-  }
-  > div {
-    @apply flex gap-2;
-  }
+  @apply flex justify-center items-center w-fit gap-1.5;
+  @apply h-9 px-2 rounded-md cursor-pointer;
+  line-height: 1em;
+  /* letter-spacing: -0.01ch; */
 }
 
 @utility u-button-square {

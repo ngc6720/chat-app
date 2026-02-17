@@ -1,7 +1,7 @@
 import { ChatError } from "@/features/chat/models/Errors";
 import * as token from "@/lib/token";
 import { RepositoryLink } from "@/ui/RepositoryLink";
-import { LockKeyhole } from "lucide-react";
+import { Link2 } from "lucide-react";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { redirect, RedirectType } from "next/navigation";
@@ -79,9 +79,9 @@ export default async function Home({
               required
             />
           </label>
-          <button type="submit" className="u-button-primary">
-            <LockKeyhole />
-            <div>Use this key</div>
+          <button type="submit" className="u-button-secondary">
+            <Link2 size={16} />
+            <div>Link this key and start</div>
           </button>
         </form>
       </div>

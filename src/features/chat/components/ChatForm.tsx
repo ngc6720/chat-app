@@ -74,10 +74,8 @@ export const ChatForm = ({
       <div className="flex w-full pointer-events-none p-2">
         <div>
           <button type="button" onClick={reset} className="u-button-secondary">
-            <div>
-              <MessageSquareX />
-              Erase chat
-            </div>
+            <MessageSquareX size={16} />
+            Erase chat
           </button>
         </div>
         <div className="ml-auto">
